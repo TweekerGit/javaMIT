@@ -13,28 +13,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico">
 
 		<!-- Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
 
 		<!-- Bootstrap core CSS -->
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 		<!-- Font Awesome CSS -->
-		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
 		<!-- Plugins -->
-		<link href="css/animations.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/css/animations.css" rel="stylesheet">
 
 		<!-- Worthy core CSS file -->
-		<link href="css/style.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet">
 
-		<!-- Custom css --> 
-		<link href="css/custom.css" rel="stylesheet">
+		<!-- Custom css -->
+		<link href="<%=request.getContextPath()%>/css/custom.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/myCustom.css">
+		<link rel="stylesheet" href="<%=request.getContextPath()%>/css/myCustom.css">
 	</head>
 
 	<body class="no-trans">
@@ -43,7 +43,7 @@
 		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
 
 		<!-- header start -->
-		<!-- ================ --> 
+		<!-- ================ -->
 		<header class="header fixed clearfix navbar navbar-fixed-top">
 			<div class="container">
 				<div class="row">
@@ -55,13 +55,13 @@
 
 							<!-- logo -->
 							<div class="logo smooth-scroll">
-								<a href="#banner"><img id="logo" src="images/TweekerLogo.png" alt="Worthy"></a>
+								<a href="<%=request.getContextPath()%>"><img id="logo" src="<%=request.getContextPath()%>/images/TweekerLogo.png" alt="Worthy"></a>
 							</div>
 
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="#banner">Tweeker</a></div>
-							
+								<div class="site-name"><a href="<%=request.getContextPath()%>">Tweeker</a></div>
+
 							</div>
 
 						</div>
@@ -144,36 +144,41 @@
 					<div class="row">
 						<div class="col-sm-5">
 							<div class="footer-content">
-								<form role="form" id="footer-form" method="POST">
+								<form role="form" id="footer-form" action="<%=request.getContextPath()%>/form" method="POST">
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="name2">First name</label>
-										<input type="text" class="form-control" id="name2" placeholder="First name" name="firstName" required>
+										<label class="sr-only" for="firstName">First name</label>
+										<input type="text" class="form-control" id="firstName" placeholder="First name" name="firstName" required>
 										<i class="fa fa-user form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="name2">Last name</label>
-										<input type="text" class="form-control" id="name2" placeholder="Last name" name="lastName" required>
+										<label class="sr-only" for="lastName">Last name</label>
+										<input type="text" class="form-control" id="lastName" placeholder="Last name" name="lastName" required>
 										<i class="fa fa-user form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="email2">Phone</label>
-										<input type="email" class="form-control" id="email2" placeholder="Phone" name="phone" required>
+										<label class="sr-only" for="phone">Phone</label>
+										<input type="email" class="form-control" id="phone" placeholder="Phone" name="phone" required>
 										<i class="fa fa-phone form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback outline">
 										<div>
-											<label class="sr-only" for="checkbox">You like</label>
 										<p>Chose what you like:</p>
 										<div class="spans">
-											<span><input type="checkbox" value="yes" value="mountains" name="places"> Mountains</span>
-											<span><input type="checkbox" value="yes" value="sea" name="places"> Sea</span>
-											<span><input type="checkbox" value="yes" value="forest" name="places"> Forest</span>
+											<span><input id="mountains" type="checkbox" value="yes" value="mountains" name="places"> Mountains
+												<label class="sr-only" for="mountains">Mountains</label>
+                                            </span>
+											<span><input id="sea" type="checkbox" value="yes" value="sea" name="places"> Sea
+												<label class="sr-only" for="sea">Sea</label>
+											</span>
+											<span><input id="forest" type="checkbox" value="yes" value="forest" name="places"> Forest
+												<label class="sr-only" for="forest">Forest</label>
+											</span>
 										</div>
 										</div>
 									</div>
 									<div class="form-group has-feedback">
-										<label class="sr-only" for="message2">Wishes for us</label>
-										<textarea class="form-control" rows="8" id="message2" placeholder="Wishes for us" name="wishes" required></textarea>
+										<label class="sr-only" for="wishes">Wishes for us</label>
+										<textarea class="form-control" rows="8" id="wishes" placeholder="Wishes for us" name="wishes" required></textarea>
 										<i class="fa fa-pencil form-control-feedback"></i>
 									</div>
 									<input type="submit" value="Send" class="btn btn-default center-block">
@@ -212,7 +217,7 @@
 
 		<!-- Isotope javascript -->
 		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
-		
+
 		<!-- Backstretch javascript -->
 		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
 
