@@ -96,7 +96,7 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="#banner">Home</a></li>
+												<li class="active"><a href="<%=request.getContextPath()%>">Home</a></li>
 												<li><a href="#statistics">Statisctics</a></li>
 												<li><a href="#portfolio">Portfolio</a></li>
 												<li><a href="#about">About us</a></li>

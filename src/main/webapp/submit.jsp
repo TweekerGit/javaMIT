@@ -13,31 +13,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico">
 
 		<!-- Web Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
 
 		<!-- Bootstrap core CSS -->
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 		<!-- Font Awesome CSS -->
-		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
 
 		<!-- Plugins -->
-		<link href="css/animations.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/css/animations.css" rel="stylesheet">
 
 		<!-- Worthy core CSS file -->
-		<link href="css/style.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet">
 
 		<!-- Custom css --> 
-		<link href="css/custom.css" rel="stylesheet">
+		<link href="<%=request.getContextPath()%>/css/custom.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/myCustom.css">
+		<link rel="stylesheet" href="<%=request.getContextPath()%>/css/myCustom.css">
 	</head>
 
 	<body class="no-trans">
+	<%@page import="java.util.List, org.obrii.mit.dp2021.fit.User"%>
+
+	<% User user = (User) request.getAttribute("user");%>
 		<!-- scrollToTop -->
 		<!-- ================ -->
 		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
@@ -55,12 +58,12 @@
 
 							<!-- logo -->
 							<div class="logo smooth-scroll">
-								<a href="#banner"><img id="logo" src="images/TweekerLogo.png" alt="Worthy"></a>
+								<a href="<%=request.getContextPath()%>"><img id="logo" src="<%=request.getContextPath()%>/images/TweekerLogo.png" alt="Worthy"></a>
 							</div>
 
 							<!-- name-and-slogan -->
 							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="#banner">Tweeker</a></div>
+								<div class="site-name"><a href="<%=request.getContextPath()%>">Tweeker</a></div>
 							
 							</div>
 
@@ -96,7 +99,7 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="#banner">Home</a></li>
+												<li class="active"><a href="<%=request.getContextPath()%>">Home</a></li>
 												<li><a href="#statistics">Statisctics</a></li>
 												<li><a href="#portfolio">Portfolio</a></li>
 												<li><a href="#about">About us</a></li>
@@ -128,7 +131,10 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">Thank <span>you!</span></h1>
-							<p class="lead text-center">So that our specialists can call you and choose a tour that you like</p>
+							<p class="lead text-center">Dear, <%= user.getFirstName()%>, <%= user.getLastName()%>, thank you for your attention.
+								You choose: <%= user.getPlaces().forEach(place -> System.out.print(place+", "))%> so we will find some beautiful places for you.
+							Than we will phone you, by this number : [<%= user.getPhone()%>]. Your willing will be satisfied</p>
+							<button class="start-btn btn btn-default center-block"><a href="<%=request.getContextPath()%>">Home</a></button>
 						</div>
 					</div>
 				</div>
@@ -143,26 +149,26 @@
 		<!-- JavaScript files placed at the end of the document so the pages load faster
 		================================================== -->
 		<!-- Jquery and Bootstap core js files -->
-		<script type="text/javascript" src="plugins/jquery.min.js"></script>
-		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
 
 		<!-- Modernizr javascript -->
-		<script type="text/javascript" src="plugins/modernizr.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/modernizr.js"></script>
 
 		<!-- Isotope javascript -->
-		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/isotope/isotope.pkgd.min.js"></script>
 		
 		<!-- Backstretch javascript -->
-		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/jquery.backstretch.min.js"></script>
 
 		<!-- Appear javascript -->
-		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/jquery.appear.js"></script>
 
 		<!-- Initialization of Plugins -->
-		<script type="text/javascript" src="js/template.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/template.js"></script>
 
 		<!-- Custom Scripts -->
-		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="<%=request.getContextPath()%>/js/custom.js"></script>
 
 	</body>
 </html>
