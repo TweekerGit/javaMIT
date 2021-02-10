@@ -6,60 +6,40 @@ import java.util.List;
 public class User {
     
     
-    private int id;
-    private String name;
-    private String surname;
-    private List<String> countries;
-    private String configuration;
-    
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private List<String> places;
+    private String wishes;
+
     public User() {
     }
     
-    public User(String name, String surname, String[] countries, String configuration) {
-        this.name = name;
-        this.surname = surname;
-        if (countries != null) this.countries = Arrays.asList(countries);
-        this.configuration = configuration;
-        
+    public User(String firstName, String lastName, String phone, String[] places, String wishes) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        if (places != null) this.places = Arrays.asList(places);
+        this.wishes = wishes;
     }
 
-    public int getId() {
-        return id;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getLastName() {
+        return lastName;
     }
 
-    public String getName() {
-        return name;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public List<String> getPlaces() {
+        return places;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public List<String> getCountries() {
-        return countries;
-    }
-
-    public void setCountries(List<String> countries) {
-        this.countries = countries;
-    }
-
-    public String getConfiguration() {
-        return configuration;
-    }
-
-    public void setConfiguration(String configuration) {
-        this.configuration = configuration;
+    public String getWishes() {
+        return wishes;
     }
 }
