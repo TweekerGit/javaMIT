@@ -124,7 +124,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h1 class="text-center"> </h1>
+						<h1 class="text-center" style="color: black">.</h1>
 					</div>
 				</div>
 			</div>
@@ -157,20 +157,20 @@
 									</div>
 									<div class="form-group has-feedback">
 										<label class="sr-only" for="phone">Phone</label>
-										<input type="email" class="form-control" id="phone" placeholder="Phone" name="phone" required>
+										<input type="tel" class="form-control" id="phone" placeholder="Phone" name="phone" required>
 										<i class="fa fa-phone form-control-feedback"></i>
 									</div>
 									<div class="form-group has-feedback outline">
 										<div>
 										<p>Chose what you like:</p>
 										<div class="spans">
-											<span><input id="mountains" type="checkbox" value="yes" value="mountains" name="places"> Mountains
+											<span><input id="mountains" type="checkbox" value="Mountains" value="mountains" name="places"> Mountains
 												<label class="sr-only" for="mountains">Mountains</label>
                                             </span>
-											<span><input id="sea" type="checkbox" value="yes" value="sea" name="places"> Sea
+											<span><input id="sea" type="checkbox" value="Sea" value="sea" name="places"> Sea
 												<label class="sr-only" for="sea">Sea</label>
 											</span>
-											<span><input id="forest" type="checkbox" value="yes" value="forest" name="places"> Forest
+											<span><input id="forest" type="checkbox" value="Forest" value="forest" name="places"> Forest
 												<label class="sr-only" for="forest">Forest</label>
 											</span>
 										</div>

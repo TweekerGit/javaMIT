@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.POST;
 import java.io.IOException;
 
 @WebServlet(name = "FormServlet", urlPatterns = {"/form"})
@@ -14,6 +15,8 @@ public class FormServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.getRequestDispatcher("form.jsp").forward(request, response);
+
+        System.out.println("GET: /form");
     }
 
     @Override
@@ -26,9 +29,11 @@ public class FormServlet extends HttpServlet {
                 request.getParameterValues("places"),
                 request.getParameter("wishes")
         );
-        
+
+        System.out.println("POST: /form");
+
         request.setAttribute("user", user);
-        request.getRequestDispatcher("pages/submit.jsp").forward(request, response);
+        request.getRequestDispatcher("submit.jsp").forward(request, response);
     }
 
     @Override

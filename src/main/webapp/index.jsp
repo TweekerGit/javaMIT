@@ -129,7 +129,7 @@
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">Fill out the <span>Form</span></h1>
 							<p class="lead text-center">So that our specialists can call you and choose a tour that you like</p>
-							<button class="start-btn btn btn-default center-block"><a href="<%=request.getContextPath()%>/form.jsp">Let's start!</a></button>
+							<button class="start-btn btn btn-default center-block"><a href="<%=request.getContextPath()%>/form">Let's start!</a></button>
 						</div>
 					</div>
 				</div>

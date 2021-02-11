@@ -131,9 +131,15 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">Thank <span>you!</span></h1>
-							<p class="lead text-center">Dear, <%= user.getFirstName()%>, <%= user.getLastName()%>, thank you for your attention.
-								You choose: <%= user.getPlaces().forEach(place -> System.out.print(place+", "))%> so we will find some beautiful places for you.
-							Than we will phone you, by this number : [<%= user.getPhone()%>]. Your willing will be satisfied</p>
+							<p class="lead text-center">Dear, <%= user.getFirstName()%> <%= user.getLastName()%>, thank you for your attention.
+								<%
+									if (user.getPlaces() != null) {
+										out.print("You choose: " + user.getPlaces() + ", so we will find some beautiful places for you. Than we ");
+									} else {
+										out.print("You didn't choose a preference. We ");
+									}
+								%>
+							 will phone you, by this number : <%= user.getPhone()%>. Your willing will be satisfied!</p>
 							<button class="start-btn btn btn-default center-block"><a href="<%=request.getContextPath()%>">Home</a></button>
 						</div>
 					</div>
@@ -143,7 +149,7 @@
 		<!-- banner end -->
 		<!-- footer start -->
 		<!-- ================ -->
-		
+
 		<!-- footer end -->
 
 		<!-- JavaScript files placed at the end of the document so the pages load faster
