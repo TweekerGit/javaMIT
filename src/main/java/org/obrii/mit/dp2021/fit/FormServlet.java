@@ -13,27 +13,32 @@ public class FormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("form.jsp").forward(request, response);
+
+        String sex = request.getParameter("sex");
+
+        Human human = sex.equals("Male") ? new Male() : new Female();
+
+        request.setAttribute("maleOrFemale", human);
+        request.getRequestDispatcher("Form.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        User user = new User(
-                request.getParameter("firstName"),
-                request.getParameter("lastName"),
-                request.getParameter("phone"),
-                request.getParameterValues("places"),
-                request.getParameter("wishes")
-        );
 
-         request.setAttribute("user", user);
-        request.getRequestDispatcher("submit.jsp").forward(request, response);
+        String sex = request.getParameter("sex");
+
+        IPeople human = new Human(
+                request.getParameter("name"),
+                request.getParameter("phone"),
+                request.getParameter("haircut"));
+
+        request.setAttribute("human", human);
+        request.getRequestDispatcher("Submit.jsp").forward(request, response);
     }
 
     @Override
     public String getServletInfo() {
         return "Short description";
     }
-
 }

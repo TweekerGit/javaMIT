@@ -1,169 +1,103 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<title>Worthy | Free Powerful Theme by HtmlCoder</title>
-		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
-		<meta name="author" content="htmlcoder.me">
-
-		<!-- Mobile Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico">
-
-		<!-- Web Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
-
-		<!-- Bootstrap core CSS -->
-		<link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-		<!-- Font Awesome CSS -->
-		<link href="<%=request.getContextPath()%>/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
-
-		<!-- Plugins -->
-		<link href="<%=request.getContextPath()%>/css/animations.css" rel="stylesheet">
-
-		<!-- Worthy core CSS file -->
-		<link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet">
-
-		<!-- Custom css --> 
-		<link href="<%=request.getContextPath()%>/css/custom.css" rel="stylesheet">
-
-		<link rel="stylesheet" href="<%=request.getContextPath()%>/css/myCustom.css">
-	</head>
-
-	<body class="no-trans">
-		<!-- scrollToTop -->
-		<!-- ================ -->
-		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
-
-		<!-- header start -->
-		<!-- ================ --> 
-		<header class="header fixed clearfix navbar navbar-fixed-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4">
-
-						<!-- header-left start -->
-						<!-- ================ -->
-						<div class="header-left clearfix">
-
-							<!-- logo -->
-							<div class="logo smooth-scroll">
-								<a href="<%=request.getContextPath()%>"><img id="logo" src="<%=request.getContextPath()%>/images/TweekerLogo.png" alt="Worthy"></a>
-							</div>
-
-							<!-- name-and-slogan -->
-							<div class="site-name-and-slogan smooth-scroll">
-								<div class="site-name"><a href="<%=request.getContextPath()%>">Tweeker</a></div>
-							
-							</div>
-
-						</div>
-						<!-- header-left end -->
-
-					</div>
-					<div class="col-md-8">
-
-						<!-- header-right start -->
-						<!-- ================ -->
-						<div class="header-right clearfix">
-
-							<!-- main-navigation start -->
-							<!-- ================ -->
-							<div class="main-navigation animated">
-
-								<!-- navbar start -->
-								<!-- ================ -->
-								<nav class="navbar navbar-default" role="navigation">
-									<div class="container-fluid">
-
-										<!-- Toggle get grouped for better mobile display -->
-										<div class="navbar-header">
-											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-												<span class="sr-only">Toggle navigation</span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-												<span class="icon-bar"></span>
-											</button>
-										</div>
-
-										<!-- Collect the nav links, forms, and other content for toggling -->
-										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
-											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="<%=request.getContextPath()%>">Home</a></li>
-												<li><a href="#statistics">Statisctics</a></li>
-												<li><a href="#portfolio">Portfolio</a></li>
-												<li><a href="#about">About us</a></li>
-											</ul>
-										</div>
-
-									</div>
-								</nav>
-								<!-- navbar end -->
-
-							</div>
-							<!-- main-navigation end -->
-
-						</div>
-						<!-- header-right end -->
-
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- header end -->
-
-		<!-- banner start -->
-		<!-- ================ -->
-		<div id="banner" class="banner">
-			<div class="banner-image"></div>
-			<div class="banner-caption">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
-							<h1 class="text-center">Fill out the <span>Form</span></h1>
-							<p class="lead text-center">So that our specialists can call you and choose a tour that you like</p>
-							<button class="start-btn btn btn-default center-block"><a href="<%=request.getContextPath()%>/form">Let's start!</a></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- banner end -->
-		<!-- footer start -->
-		<!-- ================ -->
-		
-		<!-- footer end -->
-
-		<!-- JavaScript files placed at the end of the document so the pages load faster
-		================================================== -->
-		<!-- Jquery and Bootstap core js files -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/jquery.min.js"></script>
-		<script type="text/javascript" src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
-
-		<!-- Modernizr javascript -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/modernizr.js"></script>
-
-		<!-- Isotope javascript -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/isotope/isotope.pkgd.min.js"></script>
-		
-		<!-- Backstretch javascript -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/jquery.backstretch.min.js"></script>
-
-		<!-- Appear javascript -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/plugins/jquery.appear.js"></script>
-
-		<!-- Initialization of Plugins -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/template.js"></script>
-
-		<!-- Custom Scripts -->
-		<script type="text/javascript" src="<%=request.getContextPath()%>/js/custom.js"></script>
-
-	</body>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="The Barber Shop">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/nicepage.css" media="screen">
+<link rel="stylesheet" href="Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="<%=request.getContextPath()%>/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="<%=request.getContextPath()%>/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.6.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "index.html",
+		"logo": "images/TweekerLogo.png"
+}</script>
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-grey-75 u-header u-header" id="sec-84b1"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="<%=request.getContextPath()%>" class="u-image u-logo u-image-1" data-image-width="422" data-image-height="440">
+          <img src="<%=request.getContextPath()%>/images/TweekerLogo.png" class="u-logo-image u-logo-image-1" data-image-width="64">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="<%=request.getContextPath()%>/index.jsp" style="padding: 10px 26px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 10px 26px;">About</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="<%=request.getContextPath()%>/form?sex=Male" style="padding: 10px 26px;">Men's Haircuts</a></li>
+                </ul>
+              </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="<%=request.getContextPath()%>/form?sex=Female" style="padding: 10px 26px;">Women's Haircuts</a>
+          </div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="<%=request.getContextPath()%>/index.jsp">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="<%=request.getContextPath()%>/form?sex=Male">Men's Haircuts</a>
+                </li>
+                    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="<%=request.getContextPath()%>/form?sex=Female">Women's Haircuts</a>
+                    </li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+        <p class="u-custom-font u-font-raleway u-text u-text-1">Tweeker</p>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-3-dark-3 u-section-1" id="carousel_072a">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-42 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-32-lg u-size-32-md u-size-32-sm u-size-32-xs u-size-35-xl u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs">
+                  <div class="u-custom-color-1 u-shape u-shape-rectangle u-shape-1"></div>
+                  <div class="u-border-16 u-border-custom-color-1 u-shape u-shape-rectangle u-shape-2"></div>
+                  <div class="u-container-style u-group u-image u-image-round u-image-tiles u-image-1">
+                    <div class="u-container-layout u-container-layout-2"></div>
+                  </div>
+                  <img class="u-image u-image-2" src="images/bn-min.jpg">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-25-xl u-size-28-lg u-size-28-md u-size-28-sm u-size-28-xs u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-3">
+                  <h1 class="u-custom-font u-font-oswald u-text u-text-custom-color-1 u-text-1">The Barber Shop</h1>
+                  <p class="u-align-center u-large-text u-text u-text-variant u-text-2">As you step into our parlour style barbershop, You’ll soon be immersed in the nostalgic atmosphere of a bygone era, with the subtle sounds of cocktail shakers exuding from our adjoining award winning Cocktail Bar.</p>
+                    <a href="<%=request.getContextPath()%>/form?sex=Male" class="u-border-2 u-border-white text-left u-btn u-button-style u-btn-1" title="learn more">Men's haircuts</a>
+                  <a href="<%=request.getContextPath()%>/form?sex=Female" class="u-border-2 u-border-white text-right u-btn u-button-style u-btn-1" title="learn more">Women's haircuts<br>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-501c"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Copyright ©&nbsp;2021 | Tweeker</p>
+      </div></footer>
+  </body>
 </html>
