@@ -2,31 +2,37 @@ package org.obrii.mit.dp2021.fit;
 
 import java.util.List;
 
-public class Human implements IPeople{
+public abstract class Human implements IPeople {
 
-    private String Name;
-    private String Phone;
-    private String Haircut;
+    private String name;
+    private String phone;
+    private String haircut;
+    private IHaircutsService service;
 
     public Human() {
     }
 
-    public Human(String name, String phone, String haircut) {
-        Name = name;
-        Phone = phone;
-        Haircut = haircut;
+    public Human(IHaircutsService service) {
+        this.service = service;
+    }
+
+    public Human(String name, String phone, String haircut, IHaircutsService service) {
+        this.name = name;
+        this.phone = phone;
+        this.haircut = haircut;
+        this.service = service;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public String getHaircut() {
-        return Haircut;
+        return haircut;
     }
 
     @Override
@@ -36,6 +42,6 @@ public class Human implements IPeople{
 
     @Override
     public List<IHaircut> getHaircuts() {
-        return null;
+        return service.getHaircuts();
     }
 }

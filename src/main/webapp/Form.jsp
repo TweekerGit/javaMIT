@@ -29,7 +29,7 @@
 <header class="u-clearfix u-grey-75 u-header u-header" id="sec-84b1">
     <div class="u-clearfix u-sheet u-sheet-1">
 
-        <% IPeople human = (IPeople) request.getAttribute("maleOrFemale"); %>
+        <% IPeople maleOrFemale = (IPeople) request.getAttribute("maleOrFemale");%>
         <a href="<%=request.getContextPath()%>/index.jsp" class="u-image u-logo u-image-1" data-image-width="422"
            data-image-height="440">
             <img src="<%=request.getContextPath()%>/images/TweekerLogo.png" class="u-logo-image u-logo-image-1"
@@ -119,7 +119,7 @@
                         <select id="select-85fb" name="haircut"
                                 class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
                                 required="required">
-                            <% for (IHaircut haircut : human.getHaircuts()) {%>
+                            <% for (IHaircut haircut : maleOrFemale.getHaircuts()) {%>
                             <option value="<%= haircut.getHaircut()%>">
                                 <%=haircut.getHaircut()%>
                             </option>

@@ -16,9 +16,9 @@ public class FormServlet extends HttpServlet {
 
         String sex = request.getParameter("sex");
 
-        Human human = sex.equals("Male") ? new Male() : new Female();
+        IPeople maleOrFemale = sex.equals("Male") ? new Male() : new Female();
 
-        request.setAttribute("maleOrFemale", human);
+        request.setAttribute("maleOrFemale", maleOrFemale);
         request.getRequestDispatcher("Form.jsp").forward(request, response);
     }
 
@@ -28,7 +28,7 @@ public class FormServlet extends HttpServlet {
 
         String sex = request.getParameter("sex");
 
-        IPeople human = new Human(
+        IPeople human = new Male(
                 request.getParameter("name"),
                 request.getParameter("phone"),
                 request.getParameter("haircut"));
