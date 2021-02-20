@@ -17,13 +17,7 @@
           href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-
-
-    <meta property="og:title" content="Form">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="<%=request.getContextPath()%>">
-    <meta property="og:url" content="index.html">
 </head>
 <body class="u-body">
 <header class="u-clearfix u-grey-75 u-header u-header" id="sec-84b1">
@@ -108,7 +102,6 @@
                 <div class="u-form-group u-form-phone u-form-group-2">
                     <label for="phone" class="u-custom-font u-font-roboto-slab u-form-control-hidden u-label u-label-2">Phone</label>
                     <input type="tel"
-                           pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
                            placeholder="Phone" id="phone" name="phone"
                            class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
                 </div>

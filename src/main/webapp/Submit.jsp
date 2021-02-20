@@ -26,10 +26,6 @@
         "url": "index.html",
         "logo": "images/TweekerLogo.png"
     }</script>
-    <meta property="og:title" content="Home">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:url" content="index.html">
 </head>
 <body class="u-body">
 

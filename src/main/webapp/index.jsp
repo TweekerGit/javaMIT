@@ -23,10 +23,6 @@
 		"url": "index.html",
 		"logo": "images/TweekerLogo.png"
 }</script>
-    <meta property="og:title" content="Home">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:url" content="index.html">
   </head>
   <body class="u-body"><header class="u-clearfix u-grey-75 u-header u-header" id="sec-84b1"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="<%=request.getContextPath()%>" class="u-image u-logo u-image-1" data-image-width="422" data-image-height="440">
