@@ -85,6 +85,9 @@
                   </a>
                 </div>
               </div>
+                <div class="sxema">
+                    <img src="<%=request.getContextPath()%>/images/sxema.png" alt="sxema">
+                </div>
             </div>
           </div>
         </div>
