@@ -1,102 +1,139 @@
+<%@ page contentType="text/html;charset=utf-8" %>
 <!DOCTYPE html>
-<html style="font-size: 16px;">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="The Barber Shop">
-    <meta name="description" content="">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Home</title>
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="<%=request.getContextPath()%>/jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="<%=request.getContextPath()%>/nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.6.1, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"url": "index.html",
-		"logo": "images/TweekerLogo.png"
-}</script>
-  </head>
-  <body class="u-body"><header class="u-clearfix u-grey-75 u-header u-header" id="sec-84b1"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="<%=request.getContextPath()%>" class="u-image u-logo u-image-1" data-image-width="422" data-image-height="440">
-          <img src="<%=request.getContextPath()%>/images/TweekerLogo.png" class="u-logo-image u-logo-image-1" data-image-width="64">
-        </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</symbol>
-</defs></svg>
-            </a>
-          </div>
-          <div class="u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="<%=request.getContextPath()%>/index.jsp" style="padding: 10px 26px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 10px 26px;">About</a>
-            </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="<%=request.getContextPath()%>/form?sex=Male" style="padding: 10px 26px;">Men's Haircuts</a></li>
-                </ul>
-              </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="<%=request.getContextPath()%>/form?sex=Female" style="padding: 10px 26px;">Women's Haircuts</a>
-          </div>
-          <div class="u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="<%=request.getContextPath()%>/index.jsp">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="<%=request.getContextPath()%>/form?sex=Male">Men's Haircuts</a>
-                </li>
-                    </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="<%=request.getContextPath()%>/form?sex=Female">Women's Haircuts</a>
-                    </li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-        <p class="u-custom-font u-font-raleway u-text u-text-1">Tweeker</p>
-      </div></header>
-    <section class="u-align-center u-clearfix u-palette-3-dark-3 u-section-1" id="carousel_072a">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-42 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-32-lg u-size-32-md u-size-32-sm u-size-32-xs u-size-35-xl u-layout-cell-1">
-                <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs">
-                  <div class="u-custom-color-1 u-shape u-shape-rectangle u-shape-1"></div>
-                  <div class="u-border-16 u-border-custom-color-1 u-shape u-shape-rectangle u-shape-2"></div>
-                  <div class="u-container-style u-group u-image u-image-round u-image-tiles u-image-1">
-                    <div class="u-container-layout u-container-layout-2"></div>
-                  </div>
-                  <img class="u-image u-image-2" src="images/bn-min.jpg">
-                </div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-25-xl u-size-28-lg u-size-28-md u-size-28-sm u-size-28-xs u-layout-cell-2">
-                <div class="u-container-layout u-container-layout-3">
-                  <h1 class="u-custom-font u-font-oswald u-text u-text-custom-color-1 u-text-1">The Barber Shop</h1>
-                  <p class="u-align-center u-large-text u-text u-text-variant u-text-2">As you step into our parlour style barbershop, You’ll soon be immersed in the nostalgic atmosphere of a bygone era, with the subtle sounds of cocktail shakers exuding from our adjoining award winning Cocktail Bar.</p>
-                    <a href="<%=request.getContextPath()%>/form?sex=Male" class="u-border-2 u-border-white text-left u-btn u-button-style u-btn-1" title="learn more">Men's haircuts</a>
-                  <a href="<%=request.getContextPath()%>/form?sex=Female" class="u-border-2 u-border-white text-right u-btn u-button-style u-btn-1" title="learn more">Women's haircuts<br>
-                  </a>
-                </div>
-              </div>
-                <div class="sxema">
-                    <img src="<%=request.getContextPath()%>/images/sxema.png" alt="sxema">
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-501c"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Copyright ©&nbsp;2021 | Tweeker</p>
-      </div></footer>
-  </body>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SITE TITLE -->
+<title>Lab3</title>
+
+<!-- =========================
+      FAV AND TOUCH ICONS  
+============================== -->
+<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico">
+<link rel="apple-touch-icon" href="<%=request.getContextPath()%>/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<%=request.getContextPath()%>/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<%=request.getContextPath()%>/images/apple-touch-icon-114x114.png">
+
+<!-- =========================
+     STYLESHEETS   
+============================== -->
+
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/master.css" />
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+<div class="preloader" id="preloader"> <img src="<%=request.getContextPath()%>/images/preloader.gif" alt="" /> </div>
+<!-- =========================
+     TOP BAR
+============================== -->
+<div class="top-bar" id="top-bar">
+	<div class="container">
+		<div class="row"> 
+			
+			<!-- TOP BAR LEFT -->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="top-bar-adress"> <i class="flaticon-navigation-arrow"></i> Henderson Blvd PO Box 356012, Tampa, FL 54452 </div>
+			</div>
+			
+			<!-- TOP BAR RIGHT -->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="top-bar-social"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-skype"></i></a> </div>
+				<div class="top-bar-mail"> <i class="fa fa-envelope"></i> <a href="#">office@dental.com</a> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========================
+     END TOP BAR   
+============================== --> 
+
+<!-- =========================
+     HEADER
+============================== -->
+<div class="header" id="header">
+	<div class="container">
+		<div class="row"> 
+			
+			<!-- HEADER LOGO -->
+			<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+				<div class="header-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+					<span class="bold600 color-child-6">DENTAL</span>
+					<span class="color-child-5">CLINIC</span>
+					</a> </div>
+			</div>
+			
+			<!-- HEADER BUTTONS -->
+			<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+				<div class="header-button"> <a href="#bookform1" class="fancybox-2 btn btn-default">
+					<span class="plus">+</span>
+					MAKE AN APPOINTMENT</a> </div>
+				<div class="header-phone"> <i class="fa fa-phone"></i> 123 456-7890 </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========================
+     END HEADER
+============================== --> 
+
+<!-- =========================
+     MAIN MENU
+============================== -->
+<div id="smartposition"></div>
+<div class="top-menu" id="top-menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="mobile-bar-cont">
+					<div class="top-menu-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+						<span class="bold600 color-child-6">DENTAL</span>
+						<span class="color-child-5">CLINIC</span>
+						</a> </div>
+					<div class="mobile-bar">
+						<div class="show-menu" id="show-menu"> <i class="fa fa-bars"></i> </div>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="<%=request.getContextPath()%>">HOME</a></li>
+					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#">SERVICES</a></li>
+					<li><a href="#">OUR DOCTORS</a></li>
+					<li><a href="#">BLOG</a></li>
+					<li><a href="#">PAGES</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========================
+     END MAIN MENU
+============================== -->
+<div style="background-color: lightgray; height: 754px;">
+	<h1 style="text-align: center; padding: 30px;">Here you can make an appointment</h1>
+	<div class="wrapper">
+		<div class="line">		
+			<div class="id">1</div>
+			<div class="FirstName">Влад</div>
+			<div class="LastName">Фіть</div>
+			<div class="Phone">+380980197816</div>
+			<div class="Date">19.06.2002</div>
+			<form action="/form" method="POST">
+				<button type="submit" value="Update">Update</button>
+			</form>
+			<form action="">
+				<button type="submit" value="Update">Delete</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/responsive.css" />
+
+<script src="<%=request.getContextPath()%>/js/jquery-2.2.0.min.js"></script>
+
+<script src="<%=request.getContextPath()%>/js/theme.js"></script>
+</body>
 </html>
