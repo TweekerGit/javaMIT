@@ -1,47 +1,68 @@
 package org.obrii.mit.dp2021.fit.data;
 
-public class Data {
-    private int Id;
-    private String Name;
-    private int Age;
-    private String Mail;
+import java.io.Serializable;
 
-    public Data(int id, String name, int age, String mail) {
-        Id = id;
-        Name = name;
-        Age = age;
-        Mail = mail;
+public class Data implements Serializable{
+
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String date;
+
+    public Data() {
+    }
+
+    public Data(int id, String firstName, String lastName, String phone, String date) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.date = date;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getName() {
-        return Name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public int getAge() {
-        return Age;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setAge(int age) {
-        Age = age;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getMail() {
-        return Mail;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setMail(String mail) {
-        Mail = mail;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Data{" + "id = " + id + ", firstName = " + firstName + ", lastName = " + lastName + ", phone = " + phone + ", date = " + date + '}';
     }
 }

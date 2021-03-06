@@ -56,7 +56,7 @@
 			
 			<!-- HEADER LOGO -->
 			<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-				<div class="header-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+				<div class="header-logo"> <a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
 					<span class="bold600 color-child-6">DENTAL</span>
 					<span class="color-child-5">CLINIC</span>
 					</a> </div>
@@ -64,9 +64,11 @@
 			
 			<!-- HEADER BUTTONS -->
 			<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-				<div class="header-button"> <a href="#bookform1" class="fancybox-2 btn btn-default">
-					<span class="plus">+</span>
-					MAKE AN APPOINTMENT</a> </div>
+				<div class="header-button"> <form action="formCreate.jsp" method="GET">
+					<button type="submit" class="fancybox-2 btn btn-default">
+						<span class="plus">+</span>
+						MAKE AN APPOINTMENT</button>
+				</form> </div>
 				<div class="header-phone"> <i class="fa fa-phone"></i> 123 456-7890 </div>
 			</div>
 		</div>
@@ -85,7 +87,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="mobile-bar-cont">
-					<div class="top-menu-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+					<div class="top-menu-logo"> <a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
 						<span class="bold600 color-child-6">DENTAL</span>
 						<span class="color-child-5">CLINIC</span>
 						</a> </div>
@@ -112,22 +114,28 @@
 <div style="background-color: lightgray; height: 754px;">
 	<h1 style="text-align: center; padding: 30px;">Here you can change your value</h1>
 	<div class="wrapper">
-		<div class="line">		
-			<input type="text">
-			<input type="text">
-			<input type="text">
-			<input type="text">
-			<form action="<%=request.getContextPath()%>/form" method="POST">
+		<div class="line">
+			<form class="formclass" action="<%=request.getContextPath()%>/form" method="POST">
 				<input type="hidden" name="id" value="<%=request.getParameter("id")%>">
 
-				Fill in form <br>
-				<input type="text" name="name" value="<%=request.getParameter("firstName")%>" required><br/>
+				<div class="element">
+					<p>First Name</p>
+					<input type="text" name="firstName" value="<%=request.getParameter("firstName")%>" required>
+				</div>
+				<div class="element">
+					<p>Last Name</p>
+					<input type="text" name="lastName" value="<%=request.getParameter("lastName")%>" required>
+				</div>
 
-				<input type="text" name="age" value="<%=request.getParameter("lastName")%>" required><br/>
+				<div class="element">
+					<p>Phone</p>
+					<input type="tel" name="phone" value="<%=request.getParameter("phone")%>" required>
+				</div>
 
-				<input type="text" name="email" value="<%=request.getParameter("phone")%>"><br/>
-
-				<input type="text" name="email" value="<%=request.getParameter("date")%>"><br/>
+				<div class="element">
+					<p>Date</p>
+					<input type="date" name="date" value="<%=request.getParameter("date")%>" required>
+				</div>
 
 				<button type="submit" value="Update">Update Client</button>
 			</form>

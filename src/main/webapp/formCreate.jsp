@@ -64,9 +64,11 @@
 			
 			<!-- HEADER BUTTONS -->
 			<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-				<div class="header-button"> <a href="#bookform1" class="fancybox-2 btn btn-default">
-					<span class="plus">+</span>
-					MAKE AN APPOINTMENT</a> </div>
+				<div class="header-button"> <form action="formCreate.jsp" method="GET">
+					<button type="submit" class="fancybox-2 btn btn-default">
+						<span class="plus">+</span>
+						MAKE AN APPOINTMENT</button>
+				</form> </div>
 				<div class="header-phone"> <i class="fa fa-phone"></i> 123 456-7890 </div>
 			</div>
 		</div>
@@ -85,7 +87,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="mobile-bar-cont">
-					<div class="top-menu-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+					<div class="top-menu-logo"> <a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
 						<span class="bold600 color-child-6">DENTAL</span>
 						<span class="color-child-5">CLINIC</span>
 						</a> </div>
@@ -114,14 +116,14 @@
 	<div class="wrapper">
 		<div class="line">		
 
-			<form action="<%=request.getContextPath()%>/" method="POST">
+			<form class="formcreate" action="<%=request.getContextPath()%>" method="POST">
 				<input type="hidden" name="id" value="0">
 				<input type="hidden" name="title" value="Submited"/>
 
 				<input type="text" name="firstName" placeholder="First Name" required><br/>
 				<input type="text" name="lastName" placeholder="Last Name" required><br/>
-				<input type="radio" name="phone" placeholder="Phone" required><br/>
-				<input type="radio" name="date" placeholder="Date"><br/>
+				<input type="tel" name="phone" placeholder="Phone" required><br/>
+				<input type="date" name="date" placeholder="Date"><br/>
 
 				<button type="submit" value="Update">Create Client</button>
 			</form>

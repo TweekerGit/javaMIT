@@ -2,15 +2,12 @@ package org.obrii.mit.dp2021.fit.crudTools;
 
 import org.obrii.mit.dp2021.fit.data.Data;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class WriteData {
+public class WriteData implements Serializable {
     public static void write(List<Data> data){
         try (FileOutputStream f = new FileOutputStream(Crud._file); ObjectOutputStream o = new ObjectOutputStream(f)) {
 

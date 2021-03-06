@@ -3861,11 +3861,13 @@ frame {
   justify-content: space-around;
   background-color: white;
   border-radius: 15px;
+  align-items: center;
 }
 
-.id, .FirstName, .LastName, .Phone, .Date {
+.id, .LastName, .FirstName, .Phone, .Date{
   display: flex;
   align-items: center;
+
 }
 
 form>button{
@@ -3875,4 +3877,53 @@ form>button{
   padding: 0 15px;
   border: 0;
   color: white;
+}
+
+form{
+  margin-block: 0;
+}
+
+form input{
+  height: 15px;
+}
+
+form.formclass {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formclass p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+form.formcreate{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+button.fancybox-2.btn.btn-default {
+  padding-bottom: 33px;
+}
+
+.searchLi>form{
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+
+input.searchInput{
+  height: 0px;
+}
+
+li.searchLi{
+  margin-left: 80px;
+}
+
+.searcch-btn{
+  margin-left: 15px;
+  margin-top: 2px;
 }

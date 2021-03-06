@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="org.obrii.mit.dp2021.fit.data.Data" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 <!DOCTYPE html>
 <html lang="uk">
@@ -24,6 +26,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
+<% List<Data> CrudData = (List<Data>) request.getAttribute("CrudData");
+%>
 <div class="preloader" id="preloader"> <img src="<%=request.getContextPath()%>/images/preloader.gif" alt="" /> </div>
 <!-- =========================
      TOP BAR
@@ -58,7 +62,7 @@
 			
 			<!-- HEADER LOGO -->
 			<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-				<div class="header-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+				<div class="header-logo"> <a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
 					<span class="bold600 color-child-6">DENTAL</span>
 					<span class="color-child-5">CLINIC</span>
 					</a> </div>
@@ -66,9 +70,11 @@
 			
 			<!-- HEADER BUTTONS -->
 			<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-				<div class="header-button"> <a href="#bookform1" class="fancybox-2 btn btn-default">
-					<span class="plus">+</span>
-					MAKE AN APPOINTMENT</a> </div>
+				<div class="header-button"> <form action="formCreate.jsp" method="GET">
+					<button type="submit" class="fancybox-2 btn btn-default">
+						<span class="plus">+</span>
+						MAKE AN APPOINTMENT</button>
+				</form> </div>
 				<div class="header-phone"> <i class="fa fa-phone"></i> 123 456-7890 </div>
 			</div>
 		</div>
@@ -87,7 +93,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="mobile-bar-cont">
-					<div class="top-menu-logo"> <a href="#"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
+					<div class="top-menu-logo"> <a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/images/logo.svg" alt="" />
 						<span class="bold600 color-child-6">DENTAL</span>
 						<span class="color-child-5">CLINIC</span>
 						</a> </div>
@@ -103,6 +109,12 @@
 					<li><a href="#">BLOG</a></li>
 					<li><a href="#">PAGES</a></li>
 					<li><a href="#">CONTACT US</a></li>
+					<li class="searchLi">
+						<form action="" method="GET">
+							<input type="text" class="searchInput" name="search">
+							<button class="searcch-btn" type="submit" value="search data">Search</button>
+						</form>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -114,19 +126,29 @@
 <div style="background-color: lightgray; height: 754px;">
 	<h1 style="text-align: center; padding: 30px;">Here you can make an appointment</h1>
 	<div class="wrapper">
-		<div class="line">		
-			<div class="id">1</div>
-			<div class="FirstName">Влад</div>
-			<div class="LastName">Фіть</div>
-			<div class="Phone">+380980197816</div>
-			<div class="Date">19.06.2002</div>
-			<form action="/form" method="POST">
-				<button type="submit" value="Update">Update</button>
-			</form>
-			<form action="">
-				<button type="submit" value="Update">Delete</button>
-			</form>
-		</div>
+		<%
+				for (Data client : CrudData){%>
+				<div class="line">
+					<div class="id"><%=client.getId()%></div>
+					<div class="FirstName"><%=client.getFirstName()%></div>
+					<div class="LastName"><%=client.getLastName()%></div>
+					<div class="Phone"><%=client.getPhone()%></div>
+					<div class="Date"><%=client.getDate()%></div>
+					<form action="formUpdate.jsp" method="POST">
+						<input type="hidden" name="id" value="<%=client.getId()%>">
+						<input type="hidden" name="firstName" value="<%=client.getFirstName()%>">
+						<input type="hidden" name="lastName" value="<%=client.getLastName()%>">
+						<input type="hidden" name="phone" value="<%=client.getPhone()%>">
+						<input type="hidden" name="date" value="<%=client.getDate()%>">
+						<button type="submit" value="Update">Update</button>
+					</form>
+					<form action="<%=request.getContextPath()%>/form" method="GET">
+						<input type="hidden" name="id" value="<%=client.getId()%>">
+						<button type="submit" value="Update">Delete</button>
+					</form>
+				</div>
+		<%}
+		%>
 	</div>
 </div>
 
