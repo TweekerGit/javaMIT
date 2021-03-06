@@ -116,14 +116,14 @@
 	<div class="wrapper">
 		<div class="line">		
 
-			<form class="formcreate" action="<%=request.getContextPath()%>" method="POST">
+			<form class="formcreate" action="<%=request.getContextPath()%>/" method="POST">
 				<input type="hidden" name="id" value="0">
 				<input type="hidden" name="title" value="Submited"/>
 
 				<input type="text" name="firstName" placeholder="First Name" required><br/>
 				<input type="text" name="lastName" placeholder="Last Name" required><br/>
 				<input type="tel" name="phone" placeholder="Phone" required><br/>
-				<input type="date" name="date" placeholder="Date"><br/>
+				<input type="date" name="date" placeholder="Date" required><br/>
 
 				<button type="submit" value="Update">Create Client</button>
 			</form>

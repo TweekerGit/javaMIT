@@ -17,7 +17,6 @@ import java.util.logging.Logger;
 
 public class Crud implements ICrudTools {
 
-    private Logger logger;
     public static File _file;
 
     public Crud() {
@@ -25,27 +24,6 @@ public class Crud implements ICrudTools {
 
     public Crud(File file) {
         this._file = file;
-    }
-
-    public void writeData(List<Data> data) {
-
-        try (FileOutputStream f = new FileOutputStream(_file);
-             ObjectOutputStream o = new ObjectOutputStream(f)) {
-
-            data.forEach(d -> {
-                try {
-                    o.writeObject(d);
-                } catch (IOException ex) {
-                    logger.log(Level.SEVERE, null, ex);
-                }
-            });
-
-        } catch (FileNotFoundException ex) {
-            logger.log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            logger.log(Level.SEVERE, null, ex);
-        }
-
     }
 
     @Override

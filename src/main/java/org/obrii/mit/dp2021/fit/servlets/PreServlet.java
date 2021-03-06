@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 
-@WebServlet(name = "PreServlet", urlPatterns = {"/"})
+@WebServlet(name = "PreServlet", urlPatterns = {""})
 public class PreServlet extends HttpServlet {
     Crud CRUD = new Crud(new File(Config.getFileName()));
 
