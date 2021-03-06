@@ -21,15 +21,12 @@ public class Crud implements ICrudTools {
     public static File _file;
 
     public Crud() {
-        logger=Logger.getLogger(Crud.class.getName());
     }
 
     public Crud(File file) {
-        logger=Logger.getLogger(Crud.class.getName());
         this._file = file;
     }
 
-    @Override
     public void writeData(List<Data> data) {
 
         try (FileOutputStream f = new FileOutputStream(_file);
@@ -55,11 +52,11 @@ public class Crud implements ICrudTools {
     public List<Data> readData() {
 
         try (FileInputStream f = new FileInputStream(_file); ObjectInputStream o = new ObjectInputStream(f)) {
-            List<Data> result = new ArrayList<>();
+            List<Data> tempData = new ArrayList<>();
             while (f.available() > 0) {
-                result.add((Data) o.readObject());
+                tempData.add((Data) o.readObject());
             }
-            return result;
+            return tempData;
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Crud.class.getName()).log(Level.SEVERE, null, ex);
             return new ArrayList<Data>();
@@ -71,52 +68,44 @@ public class Crud implements ICrudTools {
 
     @Override
     public void createData(Data addingData) {
-        List<Data> data = this.readData();
-        addingData.setId(data.size());
-        data.add(addingData);
-        this.writeData(data);
+        List<Data> tempData = this.readData();
+        addingData.setId(tempData.size());
+        tempData.add(addingData);
+        WriteData.write(tempData);
     }
 
     @Override
     public void deleteData(int id) {
-        List<Data> newData = new ArrayList<>();
+        List<Data> tempData = new ArrayList<>();
         int trueId = 0;
         for (Data d : this.readData()) {
             if (d.getId() != id) {
                 d.setId(trueId++);
-                newData.add(d);
+                tempData.add(d);
             }
         }
-        this.writeData(newData);
+        WriteData.write(tempData);
     }
 
     @Override
     public void updateData(int id, Data data) {
-        List<Data> newData = new ArrayList<>();
+        List<Data> tempData = new ArrayList<>();
         data.setId(id);
         for (Data d : this.readData()) {
             if (d.getId() != id) {
-                newData.add(d);
-            } else{ newData.add(data); }
+                tempData.add(d);
+            } else{ tempData.add(data); }
         }
-        this.writeData(newData);
-    }
-
-    public File getFile() {
-        return _file;
-    }
-
-    public void setFileName(File file) {
-        this._file = file;
+        WriteData.write(tempData);
     }
 
     public List<Data> sortData(String phrase) {
-        List<Data> newData = new ArrayList<>();
+        List<Data> tempData = new ArrayList<>();
         for (Data d : this.readData()) {
             if(d.getFirstName().contains(phrase)){
-                newData.add(d);}
+                tempData.add(d);}
         }
-        return newData;
+        return tempData;
     }
 }
 

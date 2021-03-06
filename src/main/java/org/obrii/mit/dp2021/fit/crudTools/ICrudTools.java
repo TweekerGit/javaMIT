@@ -14,8 +14,6 @@ public interface ICrudTools {
 
     void deleteData(int id);
 
-    void writeData(List<Data> data);
-
     public List<Data> sortData(String phrase);
 
 }
