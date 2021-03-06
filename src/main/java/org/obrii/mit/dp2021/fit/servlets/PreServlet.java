@@ -32,7 +32,7 @@ public class PreServlet extends HttpServlet {
 
         System.out.println("=========GET========");
 
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("home.jsp").forward(request, response);
     }
 
     @Override
