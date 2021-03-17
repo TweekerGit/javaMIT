@@ -21,6 +21,13 @@ public class Data implements Serializable{
         this.date = date;
     }
 
+    public Data(String firstName, String lastName, String phone, String date) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.date = date;
+    }
+
     public int getId() {
         return id;
     }
