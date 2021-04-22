@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SITE TITLE -->
+<title>Lab6</title>
+
+<!-- =========================
+      FAV AND TOUCH ICONS  
+============================== -->
+<link rel="shortcut icon" th:href="@{images/favicon.ico}">
+<link rel="apple-touch-icon" th:href="@{images/apple-touch-icon.png}">
+<link rel="apple-touch-icon" sizes="72x72" th:href="@{images/apple-touch-icon-72x72.png}">
+<link rel="apple-touch-icon" sizes="114x114" th:href="@{images/apple-touch-icon-114x114.png}">
+
+<!-- =========================
+     STYLESHEETS   
+============================== -->
+
+<link rel="stylesheet" type="text/css" th:href="@{css/master.css}" />
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+<div class="preloader" id="preloader"> <img src="images/preloader.gif" alt=""/> </div>
+<!-- =========================
+     TOP BAR
+============================== -->
+<div class="top-bar" id="top-bar">
+	<div class="container">
+		<div class="row"> 
+			
+			<!-- TOP BAR LEFT -->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="top-bar-adress"> <i class="flaticon-navigation-arrow"></i>Henderson Blvd PO Box 356012, Tampa, FL 54452 </div>
+			</div>
+			
+			<!-- TOP BAR RIGHT -->
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<div class="top-bar-social"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-skype"></i></a> </div>
+				<div class="top-bar-mail"> <i class="fa fa-envelope"></i> <a href="#">office@dental.com</a> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========================
+     END TOP BAR   
+============================== --> 
+
+<!-- =========================
+     HEADER
+============================== -->
+<div class="header" id="header">
+	<div class="container">
+		<div class="row"> 
+			
+			<!-- HEADER LOGO -->
+			<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+				<div class="header-logo"> <a href="#"><img src="images/logo.svg" alt="" />
+					<span class="bold600 color-child-6">DENTAL</span>
+					<span class="color-child-5">CLINIC</span>
+					</a> </div>
+			</div>
+			
+			<!-- HEADER BUTTONS -->
+			<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+				<div class="header-button"> <form action="./addButton" method="GET">
+					<button type="submit" class="fancybox-2 btn btn-default">
+						<span class="plus">+</span>
+						MAKE AN APPOINTMENT</button>
+				</form> </div>
+				<div class="header-phone"> <i class="fa fa-phone"></i> 123 456-7890 </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========================
+     END HEADER
+============================== --> 
+
+<!-- =========================
+     MAIN MENU
+============================== -->
+<div id="smartposition"></div>
+<div class="top-menu" id="top-menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="mobile-bar-cont">
+					<div class="top-menu-logo"> <a href="#"><img src="images/logo.svg" alt="" />
+						<span class="bold600 color-child-6">DENTAL</span>
+						<span class="color-child-5">CLINIC</span>
+						</a> </div>
+					<div class="mobile-bar">
+						<div class="show-menu" id="show-menu"> <i class="fa fa-bars"></i> </div>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#">SERVICES</a></li>
+					<li><a href="#">OUR DOCTORS</a></li>
+					<li><a href="#">BLOG</a></li>
+					<li><a href="#">PAGES</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========================
+     END MAIN MENU
+============================== -->
+<div th:switch="${usersList}" style="background-color: lightgray; height: 754px;">
+	<h1 style="text-align: center; padding: 30px;">Here you can make an appointment</h1>
+	<h2 th:case="null">Be the first in line!</h2>
+	<div th:case="*" class="wrapper">
+		<div th:each="user : ${usersList}" class="line">
+			<div class="id" th:text="${user.getId}"></div>
+			<div class="FirstName" th:text="${user.getFirstName}"></div>
+			<div class="LastName" th:text="${user.getLastName}"></div>
+			<div class="Phone" th:text="${user.getPhone}"></div>
+			<div class="Date" th:text="${user.getDate}"></div>
+		</div>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" th:href="@{css/responsive.css}"/>
+
+<script src="js/jquery-2.2.0.min.js"></script>
+
+<script src="js/theme.js"></script>
+</body>
+</html>
