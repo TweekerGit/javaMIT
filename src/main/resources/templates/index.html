@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spring Boot MVC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{css/main.css}" href="../static/css/main.css">
+    </head>
+    <body>
+        <div th:switch="${students}">
+                <h2 class="noUsers" th:case="null">There are no users!</h2>
+                <div class="users" th:case="*">
+                    <h2>Users</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th></th>
+                                <th>Delete</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="student : ${students}">
+                                <td th:text="${student.name}"></td>
+                                <td th:text="${student.email}"></td>
+                        
+                                <td>
+                                    <form action="./update" method="post">
+                                        <input type="hidden"  name="url" th:value="${student.getHref()}">
+                                        <input type="text" name="name" th:value="${student.name}"/>
+                                        <input type="text" name="email" th:value="${student.email}"/>
+                                        <button  type="submit">Update</button>
+
+
+                                    </form> 
+                                </td>
+                                <td>
+                                    <form action="./del" method="post">
+                                        <input type="hidden" name="url" th:value="${student.getHref()}">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <form action="./post" method="post">
+                                <td><input type="text" name="name" /></td> 
+                                <td><input type="text" name="email" /></td> 
+                                <td colspan="2"><button type="submit">Create User</button></td> 
+                                </form> 
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <form class="getMessage" action="./getMessage">
+                    <button  type="submit"><span>Start Work</span></button>
+                </form>
+            </div>
+
+    </body>
+</html>
